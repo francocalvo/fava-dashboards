@@ -10,7 +10,7 @@ from fava.application import render_template_string
 
 class FavaDashboards(FavaExtensionBase):
     report_title = "Dashboards"
-    name = "Fava Dashboards"
+    name = "FavaDashboards"
 
     @staticmethod
     def static_file(path):
