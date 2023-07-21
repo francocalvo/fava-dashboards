@@ -10,6 +10,7 @@ from fava.application import render_template_string
 
 class FavaDashboards(FavaExtensionBase):
     report_title = "Dashboards"
+    name = "Fava Dashboards"
 
     @staticmethod
     def static_file(path):
@@ -27,9 +28,7 @@ class FavaDashboards(FavaExtensionBase):
             with open(config_file, encoding="utf-8") as f:
                 return yaml.safe_load(f)
         except Exception as ex:
-            raise FavaAPIError(
-                f"Cannot read configuration file {config_file}: {ex}"
-            )
+            raise FavaAPIError(f"Cannot read configuration file {config_file}: {ex}")
 
     def exec_query(self, query, tmpl):
         try:
