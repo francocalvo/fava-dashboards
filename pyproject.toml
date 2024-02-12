@@ -1,5 +1,22 @@
-[build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
-build-backend = "setuptools.build_meta"
+[tool.poetry]
+name = "fava-dashboards"
+version = "0.1.0"  # Specify the project version here, as it is not provided in setup.cfg
+description = ""  # Optionally, add a description here
+authors = ["Andreas Gerstmayr <andreas@gerstmayr.me>"]
+license = "MIT"
+homepage = "https://github.com/andreasgerstmayr/fava-dashboards"
+repository = "https://github.com/andreasgerstmayr/fava-dashboards"
+readme = "README.md"  # Adjust the filename as necessary
 
-[tool.setuptools_scm]
+[tool.poetry.dependencies]
+python = ">=3.6"
+fava = ">=1.26.1"
+beancount = "*"
+pyyaml = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dev-dependencies]
+setuptools_scm = "*"
